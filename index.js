@@ -260,7 +260,7 @@ Create a function called `removeArtist` that takes two arguments:
 */
 function removeArtist(array, index) {
   array.splice(index, 1);
-  return artists.length;
+  return artists.length -1;
 }
 console.log(removeArtist(artists, 0));
 
@@ -298,11 +298,15 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
-  if () {
-    
+  const newArr = [];
+  for (let i in array) {
+    if (artists[i].id > 100) {
+      newArr.push(artists[i].name);
+      return newArr;
+    }
   }
 }
-
+console.log(lotsOfArt(artists));
 
 
 
